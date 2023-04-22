@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{adjustbox}
+\usepackage{geometry}
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Sample Table}
+\label{tab:sample}
+\begin{adjustbox}{width=0.7\textwidth}
+\begin{tabular}{ |c|c| }
+  \hline
+  S & Y \\
+  \hline
+  0 & B \\
+  \hline
+  1 & A \\
+  \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\begin{table}[h]
+\centering
+\caption{Sample Table with Adjusted Page Size}
+\label{tab:sample2}
+\begin{adjustbox}{width=0.7\textwidth}
+\begin{tabular}{ |c|c| }
+  \hline
+  S & Y \\
+  \hline
+  0 & B \\
+  \hline
+  1 & A \\
+  \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+\restoregeometry
+
+\end{document}
+

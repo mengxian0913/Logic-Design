@@ -1,15 +1,17 @@
 % !TeX encoding = UTF-8
 % !TeX program = xelatex
 \documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{xeCJK} % 须放在\usepackage{}列中足够前的位置
 \usepackage{fontspec}
-\usepackage{graphicx}
 \usepackage{caption}
 \usepackage{enumerate}
 \usepackage{setspace}
 \usepackage{array} % 製作表格必須的宏包
 \usepackage{tabularx} % 自動調整列寬的表格宏包
 \usepackage{adjustbox}
+\usepackage{geometry}
 \setCJKfamilyfont{heiti}{Heiti TC}
 \CJKfamily{heiti}
 \setmainfont{Arial}
@@ -38,76 +40,150 @@
     \item [一、]摘要 
       \begin{enumerate}
         \fontsize{20pt}{22pt}\selectfont
-          \item 全加器 
+          \item 一位元關係比較器\\[.5cm]
+            \begin{minipage}{\linewidth}
+              \fontsize{16pt}{18pt}\selectfont
+              比較 A 和 B，將兩值利用邏輯閘判斷其大小。
+              其中輸出的G、E、L代表(Greater, Equal, Less) \\
+              \normalsize
+            \end{minipage}
             \begin{description}
               \fontsize{16pt}{20}\selectfont
-                \item [(1)] 函數表示式 \\[.3cm]
-                    {\Large $S_{i}=A_{i}\oplus B_{i} \oplus C_{i}$} \\
-                    {\Large $S_{i+1}=A_{i}\cdot B_{i}+A_{i}\cdot C_{i}+B_{i}\cdot C_{i}$}
-                \item [(2)] 功能模組 \\[.4cm]
-                  \includegraphics[width=8cm]{./image/全家器功能模組.png} \\
-                \item [(3)] 真值表 \\[.4cm]
-                  \includegraphics[width=4cm]{./image/全加器真值表.png}  \\[.5cm]
-                \item [(4)] 電路圖 \\[.4cm]
-                  \includegraphics[width=10cm]{./image/全加器電路圖.png} \\ [.5cm]
+                \item [(1)] 真值表 \\[.5cm]
+                    \begin{tabular}{|c c|c c c|}
+                      \hline
+                      A & B & G & E & L \\
+                      \hline
+                      0 & 0 & 0 & 1 & 0 \\
+                      \hline
+                      0 & 1 & 0 & 0 & 1 \\
+                      \hline
+                      1 & 0 & 1 & 0 & 0 \\
+                      \hline
+                      1 & 1 & 0 & 1 & 0 \\
+                      \hline
+                    \end{tabular}\\
+
+                \item [(2)] 函數 \\[.1cm]
+                    $G = A\cdot \bar B$ \\ 
+                    $E = A \cdot B + \bar A \cdot \bar B$ \\
+                    $L = \bar A\cdot B$
+                \newpage
+                \item [(3)] 功能模組 \\[.4cm]
+                  \includegraphics[width=10cm]{./image/比較器.png} \\ [.5cm]
               \normalsize
             \end{description}
-            \item 加減法電路 \\
+            \item 2 $\rightarrow$ 1 多工器\\
+              \fontsize{16pt}{20pt}\selectfont
+              \begin{samepage}              
+                三個輸入 A, B, S，S 代表選擇器。
+              \end{samepage}
               \begin{description}
-                \fontsize{16pt}{20}\selectfont
-                  \item [(1)] 加法器: $X + Y = X +(Y + 0)$
-                  \item [(2)] 減法器: $X - Y = X + (-Y) = X + (\bar{Y} + 1)$ \\
-                \normalsize  
+                  \item [(1)] 選擇碼真值表
+                    \begin{table}[h]
+                      \centering
+                      \label{tab:sample}
+                      \begin{adjustbox}{width=.15\textwidth}
+                      \begin{tabular}{ |c|c| }
+                        \hline
+                        S & Y \\
+                        \hline
+                        0 & B \\
+                        \hline
+                        1 & A \\
+                        \hline
+                      \end{tabular}
+                      \end{adjustbox}
+                      \end{table}
+                  \item [(2)] 組合函示表示式\\ 
+                      $Y = A\cdot S + B\cdot \bar S$
               \end{description}
+              \normalsize
         \normalsize
       \end{enumerate}
     \item [二、]實驗結果
+      \newpage
       \begin{description}
         \fontsize{20pt}{22pt}\selectfont
-        \item 實驗 (四位元無號數加減法器)
+        \item [1.]實驗一
           \fontsize{16pt}{18pt}\selectfont
             \begin{description}
-              \item [$\bullet$]利用7483及XOR閘,實作一個四位元加減法器
-              \item [$\bullet$]將A連接到固定的二進位數字(four bits), B連接到二進制的數字(four bits)，以及一個 $m$ ($m=0$ repersent addition. otherwise, subtraction.)執行加減法運算, 並記錄其輸出總和S(binary)及進位輸出C4的值.\\
+              \item [$\bullet$]用兩個四位元比較器7485及一般邏輯閘完成下列設計，當輸入小於4時，輸出a會亮，而當輸入小於等於10大於等於4時，輸出b會亮，當輸入大於10時，輸出c會亮。 \\[.2cm]
+              \includegraphics[width=10cm]{./image/ex1_p.png}
               \fontsize{18pt}{20pt}
-                \item [(1)]電路圖 \\[.3cm]
+              \item [(1)]實作邏輯 \\[.3cm]
                 \begin{samepage}
                   \fontsize{16pt}{18pt}
-                    當 m 為一時，代表 B 要轉成負數，並且因為 A 和 B 都是無號數，所以需要將 B 做 2 的補數。
-                    \\這時候我們可以利用 XOR 閘來完成這項任務。\\[.5cm]
-                    \bf{XOR 真值表}\\[.3cm]
-                      \normalfont
-                      \begin{tabular}{|c|c|c|}
-                        \hline
-                        A & B & Output \\
-                        \hline
-                        0 & 0 & 0 \\
-                        \hline
-                        0 & 1 & 1 \\
-                        \hline
-                        1 & 0 & 1 \\
-                        \hline
-                        1 & 1 & 0 \\
-                        \hline
-                      \end{tabular}
-                      \\[.4cm] 觀察 XOR 真值表可以發現，任何數值對 1 做 XOR 會有反向的效果  $X \oplus 1 = X^{'}$。
-                      \\ 所以可以利用 XOR 一端接到 m，一端接到輸入端，這樣子當 m 為零時(減法)，就可以講 B 做 2 的補數了。\\
-                \end{samepage}
-    
-                  \bf {電路圖} \\             
-                  \includegraphics[width=12cm]{./image/7483.png}
+                  利用兩個位元比較器來實作判斷輸入4 bit 介在哪個區間，即哪個燈應該亮。\\
+                  $\bullet$第一個 $7485_{i}$ 來判斷輸入與 4 的關係，輸出即為 $G_{i}, E_{i}, L_{i}$\\
+                  $\bullet$第二個 $7485_{k}$ 來判斷輸入與 10 的關係，輸出即為 $G_{k}, E_{k}, L_{k}$\\
+                  定義好後再利用邏輯閘完成電路。\\
+                  $\bullet$ 電路方程：\\
+                  \bf$a = L_{i}$\\
+                  $b = (G_{i} + E_{i})\cdot (L_{k} + E_{k})$\\
+                  $c = G_{k}$
                   \normalfont
-              \item [(2)] Quartus II 軟體實做 DEO 電路板 \\[6cm]
-              
-              \begin{minipage}{\linewidth}
-                \normalfont
-                先將電路圖畫出後，再將相對應的腳位對上，編譯後完成。\\
-                \bf{電路圖} \\[.4cm]
-                \includegraphics[width=12cm]{./image/Quartus-II.png}
-              \end{minipage}
-              
+                \end{samepage}
+              \item [(2)] 電路圖 \\[.5cm]
+                \includegraphics[width=13cm]{./image/ex1.png}          
             \end{description}
-          \normalsize  
+          \normalsize
+          \fontsize{20pt}{22pt}\selectfont
+        \item[2.] 實驗二 \\
+              \fontsize{16pt}{18pt}\selectfont
+                $\bullet$ 利用邏輯閘實現一個 2 $\rightarrow$ 1多工器。\\
+                $\bullet$ 利用前面已設計的2 $\rightarrow$ 1多工器, 實現一個4 $\rightarrow$ 1多工器。
+              \fontsize{18pt}{20pt}\selectfont
+              \begin{description}
+                \item[(1)] 實作邏輯\\
+                  \fontsize{16pt}{18pt}
+                  \begin{samepage}
+                    我們有兩個bit的選擇訊號 $S_{0}, S_{1}$，我們可以觀察真值表得出電路函示。\\
+                    \bf 真值表:
+                    \begin{table}[h]
+                      \centering
+                      \begin{adjustbox}{width=.3\textwidth}
+                        \begin{tabular}{ |c c|c| }
+                          \hline
+                          $S_{0}$ & $S_{1}$ & $Y$ \\
+                          \hline
+                          0 & 0 & A \\
+                          \hline
+                          0 & 1 & B \\
+                          \hline
+                          1 & 0 & C \\
+                          \hline
+                          1 & 1 & D \\
+                          \hline
+                        \end{tabular}
+                      \end{adjustbox}
+                    \end{table}\\
+                      \bf 電路函示：\\
+                      $Y = ((A\cdot S_{0} + B\cdot \bar{S_{0}})\cdot S_{1}) + ((C\cdot S_{0} + D\cdot \bar{S_{0}})\cdot \bar{S_{1}})\cdot EN$
+                  \end{samepage}
+                \fontsize{18pt}{20pt}
+                \item[(2)] 電路圖 \\[.3cm]
+                  \includegraphics[width=15cm]{./image/ex2.png} \\[.3cm]
+              \end{description}
+        \fontsize{20pt}{22pt}\selectfont
+        \item[3.] 實驗三 \\
+            \fontsize{16pt}{18pt}\selectfont
+            $\bullet$輸入今天的日期並用七段顯示器顯示。 \\
+            X=0, 七段顯示器出現今天日期的十位數字\\
+            X=1, 七段顯示器出現今天日期的個位數字
+            \normalsize
+            \begin{description}
+              \fontsize{18pt}{20pt}\selectfont
+              \item[(1)]實作邏輯 \\
+                \begin{samepage}
+                  \fontsize{16pt}{18pt}\selectfont
+                  fefef
+                  \normalsize
+                \end{samepage}
+              \fontsize{18pt}{20pt}\selectfont
+              \item[(2)]電路圖 \\[.2cm] 
+              \includegraphics[width=13cm]{./image/ex3.png}
+            \end{description}
         \normalsize
       \end{description}
     \item [三、]問題討論心得 \\[.6cm]
