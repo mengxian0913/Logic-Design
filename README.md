@@ -7,4 +7,5 @@ Here is my logic design report
 
 - Lab8 比較器與多工器
 
+- Lab9 組合應用電路
 
