@@ -11,6 +11,8 @@
 \usepackage{tabularx} % 自動調整列寬的表格宏包
 \usepackage{adjustbox}
 \usepackage{ulem} % 包含 ulem 宏包
+\usepackage{amsmath}
+
 \setCJKfamilyfont{heiti}{Heiti TC}
 \CJKfamily{heiti}
 \setmainfont{Arial}
@@ -153,8 +155,19 @@
                     
                     我們可以利用 XOR 閘的特性同時完成判斷以及補數，任何值 XOR 1 等於該反向、XOR 0 等於自己
                     。將 input 的前 3 bit XOR sign bit。即可完成判斷及做1的補數，此時如果要做補數的話要再加一，因為前面XOR 是做 1 的補數。
-                    這時候我們再利用 7483 來加 1，而代表一的那個 bit 就是 sign bit，如此一來，當輸入為負數就會做一的補數再加一，否則不做補數再加零。 
-                \end{samepage}
+                    這時候我們再利用 7483 來加 1，而代表一的那個 bit 就是 sign bit，如此一來，當輸入為負數就會做一的補數再加一，否則不做補數再加零。
+                    $$ f_{boolen}=\left\{
+                      \begin{aligned}
+                      S_1 & = & A_1 \oplus A_4 + A_4 \\
+                      S_2 & = & A_2 \oplus A_4 + A_4 + Carry \\
+                      S_3 & = & A_3 \oplus A_4 + A_4 + Carry\\
+                      S_4 & = & Carry \\
+                      Sign bit & = & A_4
+                      \end{aligned}
+                      \right.
+                      $$
+                      
+                  \end{samepage}
               \item[(2)] 電路圖\\[.3cm]
                 \includegraphics[width=13cm]{./image/ex2.png} 
             \end{description}
@@ -165,9 +178,8 @@
     \item [三、]問題討論心得 \\[.6cm]
       \begin{minipage}[t]{\linewidth}
         \fontsize{16}{18}\selectfont
-          這次實驗與以往不同，改用 DEO 電路板以及電路設計軟體 \bf{Quartus II} \normalfont 實做電路圖，並設定腳位。
-          在前幾堂課程將邏輯閘基礎以及 K-map 基礎打好，學習新的工具比較能上手。這個工具也讓我們可以不用 Debug 硬體了，只要將電路圖畫好，大致上應該就沒有問題了。
-          期待往後的實驗課程！
+          這次實驗為組合電路，從頭到尾設計一套邏輯，利用之前課程所學的邏輯閘，設計電路並完成實驗題目所需。
+          本次實驗第二題大部分的人使用 MUX 多工器來實作。我觀察到XOR邏輯閘可以同時解決補數以及判斷正負號，設計了一套絕對值電路。也成功用更精簡的方法做出此題。
         \normalsize  
       \end{minipage}
   \normalsize
