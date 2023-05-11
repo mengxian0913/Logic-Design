@@ -21,3 +21,7 @@ Here is my logic design report
 
 - Lab9 組合應用電路
 
+- Lab10 閂鎖器與正反器
+
+- Lab11 移位暫存器與應用:wq
+
