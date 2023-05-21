@@ -1,3 +1,3 @@
 git add .
 git commit -m "upload"
-git push master
+git push
