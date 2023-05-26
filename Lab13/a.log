@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.15)  26 MAY 2023 14:37
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.15)  26 MAY 2023 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,57 +411,41 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 ]
-File: ./image/截圖 2023-05-21 下午8.26.02.png Graphic file (type bmp)
-<./image/截圖 2023-05-21 下午8.26.02.png>
-
-Overfull \hbox (36.28578pt too wide) in paragraph at lines 39--46
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--46
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 49.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 43.
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <20> not available
-(Font)              size <20.74> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 49.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 43.
 
 
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 49.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 49.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 43.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20> on input line 49.
+(Font)              <16> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <13.99994> on input line 49.
+(Font)              <11.19995> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 43.
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 49.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 43.
 
+File: ./image/jk_flip_flop.png Graphic file (type bmp)
+<./image/jk_flip_flop.png>
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 49.
-
-File: ./image/n_mod.png Graphic file (type bmp)
-<./image/n_mod.png>
-
-Overfull \hbox (47.40883pt too wide) in paragraph at lines 47--53
-[]\TU/Arial(0)/m/n/20 4
+Overfull \hbox (58.72572pt too wide) in paragraph at lines 46--48
+[] 
  []
 
+File: ./image/t_flip_flop.png Graphic file (type bmp)
+<./image/t_flip_flop.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
-
+Overfull \hbox (36.28578pt too wide) in paragraph at lines 51--53
+[] 
  []
 
 [2]
@@ -469,57 +453,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
+[3]
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 70.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18> not available
+(Font)              size <17.28> substituted on input line 70.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.59995> not available
+(Font)              size <12> substituted on input line 70.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 70.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.59995> not available
+(Font)              size <12> substituted on input line 70.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <18> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12.59995> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 70.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 70.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
+(Font)              size <12> substituted on input line 70.
+
 File: ./image/ex1.png Graphic file (type bmp)
 <./image/ex1.png>
 
-Overfull \hbox (58.72572pt too wide) in paragraph at lines 70--72
+Overfull \hbox (58.72572pt too wide) in paragraph at lines 72--74
 [] 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 79.
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 79.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 79.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <16> on input line 79.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11.19995> on input line 79.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 79.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 79.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 File: ./image/ex2.png Graphic file (type bmp)
 <./image/ex2.png>
 
-Overfull \hbox (58.72572pt too wide) in paragraph at lines 82--84
+Overfull \hbox (58.72572pt too wide) in paragraph at lines 84--86
 [] 
  []
 
-[3] [4] (./a.aux)
+[4] [5] (./a.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 7969 strings out of 476684
- 214576 string characters out of 5804055
- 1852018 words of memory out of 5000000
- 28124 multiletter control sequences out of 15000+600000
- 517726 words of font info for 88 fonts, out of 8000000 for 9000
+ 7949 strings out of 476684
+ 213071 string characters out of 5804055
+ 1848018 words of memory out of 5000000
+ 28101 multiletter control sequences out of 15000+600000
+ 517724 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,5n,81p,288b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,5n,81p,288b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on a.pdf (4 pages).
+Output written on a.pdf (5 pages).
