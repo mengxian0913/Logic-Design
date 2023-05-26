@@ -26,3 +26,5 @@ Here is my logic design report
 - Lab11 移位暫存器與應用:wq
 
 - Lab12 非同步計數器
+
+- Lab13 同步計數器
