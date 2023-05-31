@@ -36,15 +36,19 @@
     \item [一、]摘要 
       \begin{enumerate}
         \fontsize{20pt}{22pt}\selectfont
-          \item 同步計數器原理 \\
+          \item 有限狀態機設計步驟 \\
             \begin{samepage}
               \fontsize{16pt}{20}\selectfont
               \begin{description}
-                \item [$\bullet$] 同步計數器中，所有的正反器由同一個時脈所觸發。
-                \item [$\bullet$] 同步計數器時間延遲較短。
-                \item [$\bullet$] 同步計數器可以用在較高之速度操作。
-                \item [$\bullet$] 在計數狀態改變時，不會有暫態發生。 \\[.2cm]
-                %\includegraphics[width=13cm]{./image/jk_flip_flop.png}
+                \item [$(1)$] 觀察狀態圖
+                \item [$(2)$] 依據狀態圖，繪製狀態表 
+                \item [$(3)$] 狀態簡化
+                \item [$(4)$] 狀態變數指定
+                \item [$(5)$] 配合正反器之激勵表，推導轉態表
+                \item [$(6)$] 利用卡諾圖化簡正反器輸入的最簡布林代數
+                \item [$(7)$] 根據布林代數繪出序向邏輯電路
+                \bf 狀態表
+                \includegraphics[width=13cm]{./image/designed-the-kmap.png}
               \end{description}
             \end{samepage}
 
