@@ -28,3 +28,5 @@ Here is my logic design report
 - Lab12 非同步計數器
 
 - Lab13 同步計數器
+
+- Lab14 有限狀態機
