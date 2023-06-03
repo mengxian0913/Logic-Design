@@ -36,9 +36,8 @@
     \item [一、]摘要 
       \begin{enumerate}
         \fontsize{20pt}{22pt}\selectfont
-          \item 有限狀態機設計步驟 \\
-            \begin{samepage}
-              \fontsize{16pt}{20}\selectfont
+          \item 有限狀態機設計步驟 
+            \fontsize{16pt}{20}\selectfont
               \begin{description}
                 \item [$(1)$] 觀察狀態圖
                 \item [$(2)$] 依據狀態圖，繪製狀態表 
@@ -48,18 +47,15 @@
                 \item [$(6)$] 利用卡諾圖化簡正反器輸入的最簡布林代數
                 \item [$(7)$] 根據布林代數繪出序向邏輯電路
                 \bf 狀態表
-                \includegraphics[width=13cm]{./image/designed-the-kmap.png}
+                \includegraphics[width=10cm]{./image/designed-the-kmap.png}
               \end{description}
-            \end{samepage}
 
-          \item 4-bit同步上/下數計數器設計-使用T 正反器 \\
-            %\includegraphics[width=13cm]{./image/t_flip_flop.png}
-            
+          \fontsize{20pt}{22}\selectfont 
           \item 實驗 
             \begin{description}
               \fontsize{16pt}{20}\selectfont
-                \item [(1)] 使用T正反器設計一個3-bit同步上/下數計數器
-                \item [(2)] 設計一個 0~99 計數器 \\
+                \item [(1)] 使用3個D正反器設計一個學號產生器 
+                \item [(2)] 使用3個D正反器設計一個順時鐘閃爍的跑馬燈 \\
               \normalsize  
             \end{description}
         \normalsize
@@ -68,22 +64,22 @@
     \item [二、]實驗結果
       \begin{description}
         \fontsize{20pt}{22pt}\selectfont
-        \item 實驗一 (使用T正反器設計一個3-bit同步上/下數計數器)
+        \item 實驗一 \space{1em}使用3個D正反器設計一個學號產生器
             \begin{description}
               \fontsize{18pt}{20pt}
-                \item [$\bullet$] Up/Down=0, 上數
-                \item [$\bullet$] Up/Down=1, 下數
+                \item [$\bullet$] CLK 頻率為 1 Hz 
+                \item [$\bullet$] 本計數器為 Moore Machine \\
                 \item []電路圖 \\[.3cm]
                   \includegraphics[width=13cm]{./image/ex1.png}
             \end{description}
           \normalsize
           
           \fontsize{20pt}{22pt}\selectfont
-          \item 實驗二 (設計一個 0~99 計數器)
+          \item 實驗二 \space 使用3個D正反器設計一個順時鐘閃爍的跑馬燈 \\
             \fontsize{16pt}{18pt}\selectfont
               \begin{description}
-                \item [$\bullet$]請使用DE0所提供的 50MHz clock, CLOCK＿50
-                \item [$\bullet$] 將CLOCK＿50 除頻 $10^7$，所得的 5Hz信號為此實驗的CLK\\
+                \item [$\bullet$] CLK 頻率為 1 Hz
+                \item [$\bullet$] Start=0, 停止閃爍, Start=1, 開始閃爍
                 \fontsize{18pt}{20pt}
                   \item []電路圖 \\[.3cm]
                     \includegraphics[width=13cm]{./image/ex2.png}
@@ -94,11 +90,10 @@
     \item [三]問題討論心得 \\[.6cm]
       \begin{minipage}[t]{\linewidth}
         \fontsize{16}{18}\selectfont
-        這次實驗我們使用T正反器成功地設計了一個3-bit同步上/下數計數器。透過適當的連接和時序控制。實驗二與上次實驗大致相同，要注意的是要將 start 判斷放在電路除頻率前
-        。此次實驗讓我更深入理解了正反器的工作原理和數計數器的設計方法，並提升了我的數位電路設計能力。
+        本次實驗是本最後一個實驗，也是我覺得最好玩的一次實驗。在上課之前對於本次的實驗想法截然不同，努力地找出規律並設計電路，但是經過老師講解的觀察狀態圖，在設計電路的技巧讓我大開眼界。這次實驗除了使用本學期教的 D-flip-flop 正反器，也需要透過觀察狀態圖並實際操作 k-map 後得到邏輯電路圖，接著再把電路接出，而這次的兩個實驗又有除頻器，讓我更加了解除頻器的操作原裡。 
       \end{minipage}
   \normalsize
-\end{description}
+\end{description}`
 
 \end{document}
 
