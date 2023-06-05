@@ -31,7 +31,7 @@ Here is my logic design report
 
 - Lab14 有限狀態機
 
-```cpp=
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
