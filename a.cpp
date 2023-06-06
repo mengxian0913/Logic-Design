@@ -2,7 +2,11 @@
 # File Name: a.cpp
 # Author: Vincent Yang
 # Mail: mengxian0913@gmail.com
+<<<<<<< HEAD
 # Created Time: 二  6/ 6 19:26:59 2023
+=======
+# Created Time: 二  6/ 6 19:30:24 2023
+>>>>>>> master
 *********************************************************/
 
 #pragma GCC optimize("O3")
@@ -18,8 +22,12 @@ using namespace std;
 #define MOD 1e9+7
 
 void solve(){
+<<<<<<< HEAD
    cout << "HelloWordl!\n" ;
    return;
+=======
+    
+>>>>>>> master
 }
 
 signed main(){
