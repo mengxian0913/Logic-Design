@@ -1,5 +1,4 @@
-# Logic-Design
-Here is my logic design report
+# Logic-Design 邏輯設計實習 ( 授課老師：陳德生 )
 
 ---
 
